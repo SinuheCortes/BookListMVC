@@ -1,13 +1,17 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using BookListMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace BookListMVC.Controllers
 {
     public class BooksController : Controller
     {
         public readonly ApplicationDbContext _db;
+        [BindProperty]
+        public Book Book { get; set; }
         public BooksController(ApplicationDbContext db)
         {
             _db = db;
@@ -15,6 +19,41 @@ namespace BookListMVC.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+        public IActionResult Upsert(int? id)
+        {
+            Book = new Book();
+            if (id == null)
+            {
+                return View(Book);
+            }
+            Book = _db.Books.FirstOrDefault(u => u.Id == id);
+            if (Book == null)
+            {
+                return NotFound();
+            }
+            return View(Book);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Upsert()
+        {
+            if (ModelState.IsValid)
+            {
+                if (Book.Id == 0)
+                {
+                    //create
+                    _db.Books.Add(Book);
+                    _db.SaveChanges();
+                }
+                else
+                {
+                    _db.Books.Update(Book);
+                }
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(Book);
         }
         #region API Calls
         [HttpGet]

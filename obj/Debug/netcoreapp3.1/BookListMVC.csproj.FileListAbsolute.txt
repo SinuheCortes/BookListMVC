@@ -415,3 +415,4 @@ C:\Users\muech\source\Repos\BookListMVC\obj\Debug\netcoreapp3.1\BookListMVC.cspr
 C:\Users\muech\source\Repos\BookListMVC\obj\Debug\netcoreapp3.1\BookListMVC.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\muech\source\Repos\BookListMVC\obj\Debug\netcoreapp3.1\BookListMVC.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\muech\source\Repos\BookListMVC\obj\Debug\netcoreapp3.1\Razor\Views\Books\Index.cshtml.g.cs
+C:\Users\muech\source\Repos\BookListMVC\obj\Debug\netcoreapp3.1\Razor\Views\Books\Upsert.cshtml.g.cs
