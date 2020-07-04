@@ -2,7 +2,7 @@
 
 Application web to make CRUD operations for a books, with Entity framework saving data in SqlServer.
 
-- ## Code shows you basics of Framework Asp .Net Core MVC 3.1
+- ## Code shows you basics of Framework Asp .Net Core 3.1 MVC
 
 To create a CRUD operations, framework get own flow, first you have to create a model, run migrations, configurate proyect, then create a controoler with actions to link to razor page to show data, and the databinding is passed by .cs page, finally add CRUD, logic. 
 
