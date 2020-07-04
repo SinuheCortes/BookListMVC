@@ -414,3 +414,4 @@ C:\Users\muech\source\Repos\BookListMVC\bin\Debug\netcoreapp3.1\zh-Hant\Microsof
 C:\Users\muech\source\Repos\BookListMVC\obj\Debug\netcoreapp3.1\BookListMVC.csproj.CoreCompileInputs.cache
 C:\Users\muech\source\Repos\BookListMVC\obj\Debug\netcoreapp3.1\BookListMVC.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\muech\source\Repos\BookListMVC\obj\Debug\netcoreapp3.1\BookListMVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\muech\source\Repos\BookListMVC\obj\Debug\netcoreapp3.1\Razor\Views\Books\Index.cshtml.g.cs
